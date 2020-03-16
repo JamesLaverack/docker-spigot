@@ -9,6 +9,6 @@ RUN java -jar BuildTools.jar --rev ${VERSION}
 
 FROM gcr.io/distroless/java:11
 
-COPY --from=builder /workspace/spigot-*.jar /usr/lib/spigot.jar
+COPY --from=builder /workspace/spigot-*.jar /opt/spigot/spigot.jar
 
-CMD ["-jar", "/usr/lib/spigot.jar"]
+CMD ["-jar", "/opt/spigot/spigot.jar"]
